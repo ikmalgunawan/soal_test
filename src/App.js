@@ -88,11 +88,13 @@ function App() {
           onChange={(e) => {
             const value = e.target.value;
             if (/^\d*\.?\d*$/.test(value) || value === '') {
-              setLoanPeriod(value ? parseFloat(value) : 0);
+              setLoanPeriod(value);
             }
           }}
         />
       </div>
+
+
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
         <label>Bunga (% per tahun):</label>
         <input
